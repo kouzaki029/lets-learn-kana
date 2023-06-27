@@ -10,16 +10,19 @@ public class List_Of_Kana : MonoBehaviour
     public GameObject kanaPosition03;
     public GameObject kanaPosition04;
     public GameObject kanaPosition05;
-    public Sprite[] listOfKana;
-    public List<int> fiveRandomNumbers = new List<int>();
-    public SpriteRenderer oldSprite;
+    public List<Sprite> kanaList;
 
     //class methods
-    public List<int> FiveRandomNumbers()
-    {        
+
+    public void CreateKanaSprite() //create 5 random kana to be shown in the game
+    {
+        List<int> fiveRandomNumbers = new List<int>(); //generate 5 unique numbers
         while (fiveRandomNumbers.Capacity < 5)
         {
-            int randomKana = Random.Range(0, listOfKana.Length); //chooses a random number from 0 to X
+            int min = 0;
+            int max = kanaList.Capacity;
+
+            int randomKana = Random.Range(min, max); //chooses a random number from 0 to X
             if (!(fiveRandomNumbers.Contains(randomKana))) //the random number is not already inside the list
             {
                 fiveRandomNumbers.Add(randomKana); //add the random number to the list
@@ -27,14 +30,17 @@ public class List_Of_Kana : MonoBehaviour
             //else
             // if the random number is already inside the list, regenerate a new random number
         }
-
-        return fiveRandomNumbers;
+        
+        int firstRandomNumber = fiveRandomNumbers[0]; //chooses a random number between 0 and X
+        Sprite kanaSprite = kanaList[firstRandomNumber]; //chooses a random kana from the array
+        Vector3 kanaPosition = kanaPosition01.transform.position; //copies kanaPosition01's position and makes it the default position for the first kana
+        Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
+        GameObject newKana = Instantiate(kanaPosition01, kanaPosition, quaternion);
+        newKana.GetComponent<SpriteRenderer>().sprite = kanaSprite;
+        Destroy(kanaPosition01);
     }
-    public void CreateKanaSprite() //create 5 random kana to be shown in the game
+    void Start() // Update is called once per frame
     {
-        Sprite kanaSprite = listOfKana[fiveRandomNumbers[1]]; //chooses a random kana from the array
-        //GameObject newKana = Instantiate(kanaPosition01);
-        //newKana.GetComponent<SpriteRenderer>().sprite = kanaSprite;
-        oldSprite.sprite = kanaSprite;
+        CreateKanaSprite();
     }
 }
