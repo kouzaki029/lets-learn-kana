@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class List_Of_Kana : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+//class variables
+    public GameObject kanaPosition01;
+    public GameObject kanaPosition02;
+    public GameObject kanaPosition03;
+    public GameObject kanaPosition04;
+    public GameObject kanaPosition05;
+    public Sprite[] listOfKana;
 
-    // Update is called once per frame
-    void Update()
+    //class methods
+    public void CreateRandomKana()
     {
         
     }
