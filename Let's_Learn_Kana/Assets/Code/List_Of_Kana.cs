@@ -10,10 +10,10 @@ public class List_Of_Kana : MonoBehaviour
     public GameObject kanaPosition03;
     public GameObject kanaPosition04;
     public GameObject kanaPosition05;
-    public List<Sprite> kanaList;
+    public List<Sprite> kanaList; //contains all of the kana sprites that are added in Unity, not Visual Studio
 
     //class methods
-    public void CreateKanaSprite() //create 5 random kana to be shown in the game
+    public void CreateKanaSprite() //uploads 5 random kana to be shown in the game
     {
         List<int> fiveRandomNumbers = new List<int>(); //generate 5 unique numbers
 
@@ -27,12 +27,13 @@ public class List_Of_Kana : MonoBehaviour
             if (!(fiveRandomNumbers.Contains(randomKana))) //sees if the random number is NOT already inside the list
             {
                 fiveRandomNumbers.Add(randomKana); //add the random number to the list
+                // fiveRandomNumber's capacity increases by 1
             }
             //else
             // if the random number is already inside the list, regenerate a new random number
         }
-        
         int firstRandomNumber = fiveRandomNumbers[0]; //chooses a random number between 0 and X
+
         Sprite kanaSprite = kanaList[firstRandomNumber]; //chooses a random kana from the array
         Vector3 kanaPosition = kanaPosition01.transform.position; //copies kanaPosition01's position and makes it the default position for the first kana
         Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
