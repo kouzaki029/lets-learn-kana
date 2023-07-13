@@ -1708,8 +1708,8 @@ GameObject:
   m_Component:
   - component: {fileID: 861193645}
   - component: {fileID: 861193644}
-  - component: {fileID: 861193646}
   - component: {fileID: 861193647}
+  - component: {fileID: 861193646}
   m_Layer: 0
   m_Name: SpeakerSprite_01
   m_TagString: Untagged
@@ -1952,7 +1952,17 @@ MonoBehaviour:
   kanaPosition03: {fileID: 496201338}
   kanaPosition04: {fileID: 204826454}
   kanaPosition05: {fileID: 927153945}
-  kanaList: []
+  kanaList:
+  - {fileID: 21300000, guid: 0a3a74b0a74604d0497acbbdf2364a4e, type: 3}
+  - {fileID: 21300000, guid: 92488f649b75d4a50b262987e9191ed6, type: 3}
+  - {fileID: 21300000, guid: e8203548251514006a92e640e8efbe12, type: 3}
+  - {fileID: 21300000, guid: 0dcc9af6e4c1e46e383fe79ae68c15dd, type: 3}
+  - {fileID: 21300000, guid: aa2e0280d175548d4b90bd8b6a511bf3, type: 3}
+  - {fileID: 21300000, guid: 277f6084dc6c645a8a48e3699ec013a9, type: 3}
+  - {fileID: 21300000, guid: d6759ce243aea4048888cefb8b4ba898, type: 3}
+  - {fileID: 21300000, guid: c4ac13d3df33c4bd0a6c4c2596c8c1aa, type: 3}
+  - {fileID: 21300000, guid: eaf99e122e86d4728bb76bad284c4d3b, type: 3}
+  - {fileID: 21300000, guid: 3970863881c5e4e7ab8fa6ee97b8ac6c, type: 3}
 --- !u!1 &927153945
 GameObject:
   m_ObjectHideFlags: 0

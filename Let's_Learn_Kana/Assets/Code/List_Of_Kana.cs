@@ -34,6 +34,7 @@ public class List_Of_Kana : MonoBehaviour
         }
         int firstRandomNumber = fiveRandomNumbers[0]; //chooses a random number between 0 and X
 
+        //uploading the kana to Unity
         Sprite kanaSprite = kanaList[firstRandomNumber]; //chooses a random kana from the array
         Vector3 kanaPosition = kanaPosition01.transform.position; //copies kanaPosition01's position and makes it the default position for the first kana
         Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
