@@ -1952,7 +1952,7 @@ MonoBehaviour:
   kanaPosition03: {fileID: 496201338}
   kanaPosition04: {fileID: 204826454}
   kanaPosition05: {fileID: 927153945}
-  kanaArray: []
+  kanaList: []
 --- !u!1 &927153945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,8 +2809,8 @@ MonoBehaviour:
   kanaPosition03: {fileID: 496201338}
   kanaPosition04: {fileID: 204826454}
   kanaPosition05: {fileID: 927153945}
-  kanaArray:
-  - {fileID: 21300000, guid: 0a3a74b0a74604d0497acbbdf2364a4e, type: 3}
+  kanaList:
+  - {fileID: 21300000, guid: aa2e0280d175548d4b90bd8b6a511bf3, type: 3}
   - {fileID: 21300000, guid: 92488f649b75d4a50b262987e9191ed6, type: 3}
   - {fileID: 21300000, guid: e8203548251514006a92e640e8efbe12, type: 3}
   - {fileID: 21300000, guid: 0dcc9af6e4c1e46e383fe79ae68c15dd, type: 3}

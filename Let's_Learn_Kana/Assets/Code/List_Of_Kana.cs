@@ -13,17 +13,18 @@ public class List_Of_Kana : MonoBehaviour
     public List<Sprite> kanaList;
 
     //class methods
-
     public void CreateKanaSprite() //create 5 random kana to be shown in the game
     {
         List<int> fiveRandomNumbers = new List<int>(); //generate 5 unique numbers
+
         while (fiveRandomNumbers.Capacity < 5)
         {
             int min = 0;
             int max = kanaList.Capacity;
 
             int randomKana = Random.Range(min, max); //chooses a random number from 0 to X
-            if (!(fiveRandomNumbers.Contains(randomKana))) //the random number is not already inside the list
+
+            if (!(fiveRandomNumbers.Contains(randomKana))) //sees if the random number is NOT already inside the list
             {
                 fiveRandomNumbers.Add(randomKana); //add the random number to the list
             }
