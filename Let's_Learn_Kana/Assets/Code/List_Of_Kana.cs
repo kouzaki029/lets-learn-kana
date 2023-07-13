@@ -47,31 +47,31 @@ public class List_Of_Kana : MonoBehaviour
         Destroy(kanaPosition01);
 
 
-        /*Sprite*/ kanaSprite = kanaList[secondRandomNumber]; //chooses a random kana from the array
-        /*Vector3*/ kanaPosition = kanaPosition02.transform.position; //copies kanaPosition02's position and makes it the default position for the first kana
-        /*Quaternion*/ quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
-        /*GameObject*/ newKana = Instantiate(kanaPosition02, kanaPosition, quaternion);
+        kanaSprite = kanaList[secondRandomNumber]; //chooses a random kana from the array
+        kanaPosition = kanaPosition02.transform.position; //copies kanaPosition02's position and makes it the default position for the first kana
+        quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
+        newKana = Instantiate(kanaPosition02, kanaPosition, quaternion);
         newKana.GetComponent<SpriteRenderer>().sprite = kanaSprite;
         Destroy(kanaPosition02);
 
-        /*Sprite*/ kanaSprite = kanaList[thirdRandomNumber]; //chooses a random kana from the array
-        /*Vector3*/ kanaPosition = kanaPosition03.transform.position; //copies kanaPosition03's position and makes it the default position for the first kana
-        /*Quaternion*/ quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
-        /*GameObject*/ newKana = Instantiate(kanaPosition03, kanaPosition, quaternion);
+        kanaSprite = kanaList[thirdRandomNumber]; //chooses a random kana from the array
+        kanaPosition = kanaPosition03.transform.position; //copies kanaPosition03's position and makes it the default position for the first kana
+        quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
+        newKana = Instantiate(kanaPosition03, kanaPosition, quaternion);
         newKana.GetComponent<SpriteRenderer>().sprite = kanaSprite;
         Destroy(kanaPosition03);
 
-        /*Sprite*/ kanaSprite = kanaList[fourthRandomNumber]; //chooses a random kana from the array
-        /*Vector3*/ kanaPosition = kanaPosition04.transform.position; //copies kanaPosition04's position and makes it the default position for the first kana
-        /*Quaternion*/ quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
-        /*GameObject*/ newKana = Instantiate(kanaPosition04, kanaPosition, quaternion);
+        kanaSprite = kanaList[fourthRandomNumber]; //chooses a random kana from the array
+        kanaPosition = kanaPosition04.transform.position; //copies kanaPosition04's position and makes it the default position for the first kana
+        quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
+        newKana = Instantiate(kanaPosition04, kanaPosition, quaternion);
         newKana.GetComponent<SpriteRenderer>().sprite = kanaSprite;
         Destroy(kanaPosition04);
 
-        /*Sprite*/ kanaSprite = kanaList[fifthRandomNumber]; //chooses a random kana from the array
-        /*Vector3*/ kanaPosition = kanaPosition05.transform.position; //copies kanaPosition05's position and makes it the default position for the first kana
-        /*Quaternion*/ quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
-        /*GameObject*/ newKana = Instantiate(kanaPosition05, kanaPosition, quaternion);
+        kanaSprite = kanaList[fifthRandomNumber]; //chooses a random kana from the array
+        kanaPosition = kanaPosition05.transform.position; //copies kanaPosition05's position and makes it the default position for the first kana
+        quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
+        newKana = Instantiate(kanaPosition05, kanaPosition, quaternion);
         newKana.GetComponent<SpriteRenderer>().sprite = kanaSprite;
         Destroy(kanaPosition05);
     }
