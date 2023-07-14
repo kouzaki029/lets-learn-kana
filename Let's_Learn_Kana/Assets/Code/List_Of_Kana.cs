@@ -5,21 +5,21 @@ using UnityEngine;
 public class List_Of_Kana : MonoBehaviour
 {
 //class variables
-    public GameObject kanaPosition01;
-    public GameObject kanaPosition02;
-    public GameObject kanaPosition03;
-    public GameObject kanaPosition04;
-    public GameObject kanaPosition05;
-    public GameObject soundPosition01;
-    public GameObject soundPosition02;
-    public GameObject soundPosition03;
-    public GameObject soundPosition04;
-    public GameObject soundPosition05;
+    public GameObject kanaPosition01; //default kana location #1
+    public GameObject kanaPosition02; //default kana location #2
+    public GameObject kanaPosition03; //default kana location #3
+    public GameObject kanaPosition04; //default kana location #4
+    public GameObject kanaPosition05; //default kana location #5
+    public GameObject soundPosition01; //default sound location #1
+    public GameObject soundPosition02; //default sound location #2
+    public GameObject soundPosition03; //default sound location #3
+    public GameObject soundPosition04; //default sound location #4
+    public GameObject soundPosition05; //default sound location #5
     public List<Sprite> kanaList; //contains all of the kana sprites that are added in Unity, not Visual Studio
     public List<AudioClip> soundList; //conrains all of the kana sounds that are added in Unity, not Visual Studio
 
     //class methods
-    public List<int> FiveUniqueRandomNumbers(int maximum)
+    public List<int> FiveUniqueRandomNumbers(int maximum) //chooses 5 unique random numbers between 0 and maximum (where maximum is also a possibe random number) 
     {
         List<int> fiveRandomNumbers = new List<int>();
 
@@ -35,10 +35,36 @@ public class List_Of_Kana : MonoBehaviour
                 fiveRandomNumbers.Add(randomNumber); //add the random number to the list
                 // fiveRandomNumber's capacity increases by 1
             }
-            //else
-            // if the random number is already inside the list, regenerate a new random number
+            /*
+            else
+            {
+               //if the random number is already inside the list, regenerate a new random number
+            }
+            */
         }
         return fiveRandomNumbers;
+    }
+    public GameObject[] randomizeSpritePosition(GameObject spritePosition01, GameObject spritePosition02, GameObject spritePosition03, GameObject spritePosition04, GameObject spritePosition05)
+    {
+        //an array meant to contain all of the game object positions
+        GameObject[] spritePositions = new GameObject[5];
+
+        //selecting 5 unique random numbers between 0 and 4
+        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(5); 
+        int firstRandomIndex = fiveRandomNumbers[0]; //copying the first random number as the first random index
+        int secondRandomIndex = fiveRandomNumbers[1]; //copying the second random number as the second random index
+        int thirdRandomIndex = fiveRandomNumbers[2]; //copying the third random number as the third random index
+        int fourthRandomIndex = fiveRandomNumbers[3]; //copying the fourth random number as the fourth random index
+        int fifthRandomIndex = fiveRandomNumbers[4]; //copying the fifth random number as the fifth random index
+
+        //assign the kana sounds randomly to the sprite positions
+        spritePositions[firstRandomIndex] = spritePosition01; //the first random index holds spritePosition01
+        spritePositions[secondRandomIndex] = spritePosition02; //the second random index holds spritePosition02
+        spritePositions[thirdRandomIndex] = spritePosition03; //the third random index holds spritePosition03
+        spritePositions[fourthRandomIndex] = spritePosition04; //the fourth random index holds spritePosition04
+        spritePositions[fifthRandomIndex] = spritePosition05; //the fifth random index holds spritePosition05
+
+        return spritePositions;
     }
     public void ChangeSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
     {
@@ -54,27 +80,33 @@ public class List_Of_Kana : MonoBehaviour
     }
     public void CreateKanaSprite() //uploads 5 random kana and their sounds to be shown in the game 
     {
-        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(kanaList.Capacity); //chooses 5 random numbers between 0 and X
+        //chooses 5 random numbers between 0 and X (including the last index of kanaList)...(i.e., choosing 5 random kana and their sounds from the list)
+        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(kanaList.Capacity);
+        int firstRandomIndex = fiveRandomNumbers[0];
+        int secondRandomIndex = fiveRandomNumbers[1];
+        int thirdRandomIndex = fiveRandomNumbers[2];
+        int fourthRandomIndex = fiveRandomNumbers[3];
+        int fifthRandomIndex = fiveRandomNumbers[4];
 
-        int firstRandomNumber = fiveRandomNumbers[0];
-        int secondRandomNumber = fiveRandomNumbers[1];
-        int thirdRandomNumber = fiveRandomNumbers[2];
-        int fourthRandomNumber = fiveRandomNumbers[3];
-        int fifthRandomNumber = fiveRandomNumbers[4];
+        //spritePosition has all of the kana sprite locations, and randomly choose where the new kana sprite is going to be positioned
+        GameObject[] randomSpritePosition = randomizeSpritePosition(kanaPosition01, kanaPosition02, kanaPosition03, kanaPosition04, kanaPosition05);
 
         //uploading the new kana sprites to Unity
-        ChangeSprite(kanaList, firstRandomNumber, kanaPosition01);
-        ChangeSprite(kanaList, secondRandomNumber, kanaPosition02);
-        ChangeSprite(kanaList, thirdRandomNumber, kanaPosition03);
-        ChangeSprite(kanaList, fourthRandomNumber, kanaPosition04);
-        ChangeSprite(kanaList, fifthRandomNumber, kanaPosition05);
+        ChangeSprite(kanaList, firstRandomIndex, randomSpritePosition[0]);
+        ChangeSprite(kanaList, secondRandomIndex, randomSpritePosition[1]);
+        ChangeSprite(kanaList, thirdRandomIndex, randomSpritePosition[2]);
+        ChangeSprite(kanaList, fourthRandomIndex, randomSpritePosition[3]);
+        ChangeSprite(kanaList, fifthRandomIndex, randomSpritePosition[4]);
+
+        //spritePosition has all of the sound sprite locations
+        randomSpritePosition = randomizeSpritePosition(soundPosition01, soundPosition02, soundPosition03, soundPosition04, soundPosition05);
 
         //uploading the new kana sounds to Unity
-        ChangeSound(soundList, firstRandomNumber, soundPosition01);
-        ChangeSound(soundList, secondRandomNumber, soundPosition02);
-        ChangeSound(soundList, thirdRandomNumber, soundPosition03);
-        ChangeSound(soundList, fourthRandomNumber, soundPosition04);
-        ChangeSound(soundList, fifthRandomNumber, soundPosition05);
+        ChangeSound(soundList, firstRandomIndex, randomSpritePosition[0]);
+        ChangeSound(soundList, secondRandomIndex, randomSpritePosition[1]);
+        ChangeSound(soundList, thirdRandomIndex, randomSpritePosition[2]);
+        ChangeSound(soundList, fourthRandomIndex, randomSpritePosition[3]);
+        ChangeSound(soundList, fifthRandomIndex, randomSpritePosition[4]);
     }
     void Start() //called before the first frame update
     {
