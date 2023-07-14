@@ -23,7 +23,7 @@ public class List_Of_Kana : MonoBehaviour
     {
         cam = Camera.main;
     }
-    public List<int> FiveRandomNumbers()
+    public List<int> FiveUniqueRandomNumbers()
     {
         List<int> fiveRandomNumbers = new List<int>();
 
@@ -49,13 +49,26 @@ public class List_Of_Kana : MonoBehaviour
         Sprite theSprite = theList[listIndex]; //chooses a random sprite from the array
         Vector3 defaulSpritePosition = spritePosition.transform.position; //copies sprite's position's and makes it the default position for the first sprite
         Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
+
         GameObject newSprite = Instantiate(spritePosition, defaulSpritePosition, quaternion);
-        newSprite.GetComponent<SpriteRenderer>().sprite = theSprite;
-        Destroy(spritePosition);
+        newSprite.GetComponent<SpriteRenderer>().sprite = theSprite; //copies the image from chosen random sprite into the new sprite
+
+        Destroy(spritePosition); //deletes the old game object
+    }
+    public void ChangeSound(List<AudioClip> theList, int listIndex, GameObject spritePosition)
+    {
+        AudioClip firstSoundSprite = theList[listIndex]; //chooses a random kana from the array
+        Vector3 defaultSpritePosition = spritePosition.transform.position;
+        Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
+
+        GameObject newSound = Instantiate(spritePosition, defaultSpritePosition, quaternion);
+        newSound.GetComponent<AudioSource>().clip = firstSoundSprite; //copues the audio clip from the chosen random sound into the new sound sprite 
+
+        Destroy(soundPosition01); //deletes the old game object
     }
     public void CreateKanaSprite() //uploads 5 random kana to be shown in the game 
     {
-        List<int> fiveRandomNumbers = FiveRandomNumbers();
+        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers();
 
         int firstRandomNumber = fiveRandomNumbers[0]; //chooses a random number between 0 and X
         int secondRandomNumber = fiveRandomNumbers[1]; //chooses a random number between 0 and X
@@ -63,43 +76,19 @@ public class List_Of_Kana : MonoBehaviour
         int fourthRandomNumber = fiveRandomNumbers[3]; //chooses a random number between 0 and X
         int fifthRandomNumber = fiveRandomNumbers[4]; //chooses a random number between 0 and X
 
+        //uploading the kana sprites to Unity
         ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
         ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
         ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
         ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
         ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
 
-        //uploading the kana sound to Unity
-        Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
-        AudioClip firstSoundSprite = soundList[firstRandomNumber]; //chooses a random kana from the array
-        Vector3 soundPosition = soundPosition01.transform.position;
-        GameObject newSound = Instantiate(soundPosition01, soundPosition, quaternion);
-        newSound.GetComponent<AudioSource>().clip = firstSoundSprite;
-        Destroy(soundPosition01);
-
-        AudioClip secondSoundSprite = soundList[secondRandomNumber]; //chooses a random kana from the array
-        soundPosition = soundPosition02.transform.position;
-        newSound = Instantiate(soundPosition02, soundPosition, quaternion);
-        newSound.GetComponent<AudioSource>().clip = secondSoundSprite;
-        Destroy(soundPosition02);
-
-        AudioClip thirdSoundSprite = soundList[thirdRandomNumber]; //chooses a random kana from the array
-        soundPosition = soundPosition03.transform.position;
-        newSound = Instantiate(soundPosition03, soundPosition, quaternion);
-        newSound.GetComponent<AudioSource>().clip = thirdSoundSprite;
-        Destroy(soundPosition03);
-
-        AudioClip fourthSoundSprite = soundList[fourthRandomNumber]; //chooses a random kana from the array
-        soundPosition = soundPosition04.transform.position;
-        newSound = Instantiate(soundPosition04, soundPosition, quaternion);
-        newSound.GetComponent<AudioSource>().clip = fourthSoundSprite;
-        Destroy(soundPosition04);
-
-        AudioClip fifthSoundSprite = soundList[fifthRandomNumber]; //chooses a random kana from the array
-        soundPosition = soundPosition05.transform.position;
-        newSound = Instantiate(soundPosition05, soundPosition, quaternion);
-        newSound.GetComponent<AudioSource>().clip = fifthSoundSprite;
-        Destroy(soundPosition05);
+        //uploading the kana sounds to Unity
+        ChangeSound(soundList, firstRandomNumber, soundPosition01);
+        ChangeSound(soundList, secondRandomNumber, soundPosition02);
+        ChangeSound(soundList, thirdRandomNumber, soundPosition03);
+        ChangeSound(soundList, fourthRandomNumber, soundPosition04);
+        ChangeSound(soundList, fifthRandomNumber, soundPosition05);
     }
     Vector3 GetMousePos()
     {
