@@ -44,7 +44,7 @@ public class List_Of_Kana : MonoBehaviour
         }
         return fiveRandomNumbers;
     }
-    public void ChangeKanaSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
+    public void ChangeSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
     {
         SpriteRenderer oldSprite = spritePosition.GetComponent<SpriteRenderer>();
         Sprite newSprite = theList[listIndex]; //chooses a random sprite from the array
@@ -67,11 +67,11 @@ public class List_Of_Kana : MonoBehaviour
         int fifthRandomNumber = fiveRandomNumbers[4]; //chooses a random number between 0 and X
 
         //uploading the new kana sprites to Unity
-        ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
-        ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
-        ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
-        ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
-        ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
+        ChangeSprite(kanaList, firstRandomNumber, kanaPosition01);
+        ChangeSprite(kanaList, secondRandomNumber, kanaPosition02);
+        ChangeSprite(kanaList, thirdRandomNumber, kanaPosition03);
+        ChangeSprite(kanaList, fourthRandomNumber, kanaPosition04);
+        ChangeSprite(kanaList, fifthRandomNumber, kanaPosition05);
 
         //uploading the new kana sounds to Unity
         ChangeSound(soundList, firstRandomNumber, soundPosition01);
