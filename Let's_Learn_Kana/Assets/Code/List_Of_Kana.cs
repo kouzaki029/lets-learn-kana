@@ -18,7 +18,7 @@ public class List_Of_Kana : MonoBehaviour
     public List<Sprite> kanaList; //contains all of the kana sprites that are added in Unity, not Visual Studio
     public List<AudioClip> soundList; //conrains all of the kana sounds that are added in Unity, not Visual Studio
     private Camera cam;
-//class methods
+    //class methods
     void Awake()
     {
         cam = Camera.main;
@@ -44,29 +44,17 @@ public class List_Of_Kana : MonoBehaviour
         }
         return fiveRandomNumbers;
     }
-    public GameObject ChangeKanaSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
+    public void ChangeKanaSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
     {
-        Sprite theSprite = theList[listIndex]; //chooses a random sprite from the array
-        Vector3 defaulSpritePosition = spritePosition.transform.position; //copies sprite's position's and makes it the default position for the first sprite
-        Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
-
-        GameObject newSprite = Instantiate(spritePosition, defaulSpritePosition, quaternion);
-        newSprite.GetComponent<SpriteRenderer>().sprite = theSprite; //copies the image from chosen random sprite into the new sprite
-
-        Destroy(spritePosition); //deletes the old game object
-
-        return newSprite; //to keeps the spritePosition's position for future replacements
+        SpriteRenderer oldSprite = spritePosition.GetComponent<SpriteRenderer>();
+        Sprite newSprite = theList[listIndex]; //chooses a random sprite from the array
+        oldSprite.sprite = newSprite;
     }
     public void ChangeSound(List<AudioClip> theList, int listIndex, GameObject spritePosition)
     {
-        AudioClip firstSoundSprite = theList[listIndex]; //chooses a random kana from the array
-        Vector3 defaultSpritePosition = spritePosition.transform.position;
-        Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
-
-        GameObject newSound = Instantiate(spritePosition, defaultSpritePosition, quaternion);
-        newSound.GetComponent<AudioSource>().clip = firstSoundSprite; //copues the audio clip from the chosen random sound into the new sound sprite 
-
-        Destroy(spritePosition); //deletes the old game object
+        SpriteRenderer oldSprite = spritePosition.GetComponent<SpriteRenderer>();
+        AudioClip newSound = theList[listIndex]; //chooses a random kana from the array
+        oldSprite.GetComponent<AudioSource>().clip = newSound;
     }
     public void CreateKanaSprite() //uploads 5 random kana to be shown in the game 
     {
@@ -79,11 +67,11 @@ public class List_Of_Kana : MonoBehaviour
         int fifthRandomNumber = fiveRandomNumbers[4]; //chooses a random number between 0 and X
 
         //uploading the new kana sprites to Unity
-        kanaPosition01 = ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
-        kanaPosition02 = ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
-        kanaPosition03 = ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
-        kanaPosition04 = ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
-        kanaPosition05 = ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
+        ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
+        ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
+        ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
+        ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
+        ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
 
         //uploading the new kana sounds to Unity
         ChangeSound(soundList, firstRandomNumber, soundPosition01);
