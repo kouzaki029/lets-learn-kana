@@ -44,7 +44,7 @@ public class List_Of_Kana : MonoBehaviour
         }
         return fiveRandomNumbers;
     }
-    public void ChangeKanaSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
+    public GameObject ChangeKanaSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
     {
         Sprite theSprite = theList[listIndex]; //chooses a random sprite from the array
         Vector3 defaulSpritePosition = spritePosition.transform.position; //copies sprite's position's and makes it the default position for the first sprite
@@ -54,6 +54,8 @@ public class List_Of_Kana : MonoBehaviour
         newSprite.GetComponent<SpriteRenderer>().sprite = theSprite; //copies the image from chosen random sprite into the new sprite
 
         Destroy(spritePosition); //deletes the old game object
+
+        return newSprite; //to keeps the spritePosition's position for future replacements
     }
     public void ChangeSound(List<AudioClip> theList, int listIndex, GameObject spritePosition)
     {
@@ -77,11 +79,11 @@ public class List_Of_Kana : MonoBehaviour
         int fifthRandomNumber = fiveRandomNumbers[4]; //chooses a random number between 0 and X
 
         //uploading the new kana sprites to Unity
-        ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
-        ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
-        ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
-        ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
-        ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
+        kanaPosition01 = ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
+        kanaPosition02 = ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
+        kanaPosition03 = ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
+        kanaPosition04 = ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
+        kanaPosition05 = ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
 
         //uploading the new kana sounds to Unity
         ChangeSound(soundList, firstRandomNumber, soundPosition01);
