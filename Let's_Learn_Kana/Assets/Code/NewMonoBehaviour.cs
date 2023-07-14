@@ -6,8 +6,7 @@ public class NewMonoBehaviour : MonoBehaviour
 {
     public Sprite[] kanaArray;
 
-    // Use this for initialization
-    void Start()
+    void Start() // Use this for initialization 
     {
         List<int> fiveRandomNumbers = new List<int>();
         while (fiveRandomNumbers.Capacity < 5)
@@ -28,8 +27,8 @@ public class NewMonoBehaviour : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    void Update() // Update is called once per frame 
     {
 
     }

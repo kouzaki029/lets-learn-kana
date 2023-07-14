@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drag_and_Drop : MonoBehaviour
+public class PlaySound : MonoBehaviour
 {
 // class variables
-    private Vector3 dragOffset;
-    private Camera cam;
+    //private Vector3 dragOffset;
+    //private Camera cam;
     public AudioSource soundPlayer;
 
-// class methods
-    void Awake()
+    // class methods
+    /*void Awake()
     {
         cam = Camera.main;
     }
@@ -30,5 +30,10 @@ public class Drag_and_Drop : MonoBehaviour
         var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         return mousePos;
+    }*/
+    public void PlaySoundEffect()
+    {
+        soundPlayer = GetComponent<AudioSource>();
+        soundPlayer.Play();
     }
 }
