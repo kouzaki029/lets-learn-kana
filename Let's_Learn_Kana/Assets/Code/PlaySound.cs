@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlaySound : MonoBehaviour
 {
-// class variables
+//class variables
     public AudioSource soundPlayer;
 
-// class methods
+//class methods
     void OnMouseDown()
     {
         soundPlayer = GetComponent<AudioSource>();

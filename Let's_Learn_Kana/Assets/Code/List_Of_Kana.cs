@@ -17,12 +17,8 @@ public class List_Of_Kana : MonoBehaviour
     public GameObject soundPosition05;
     public List<Sprite> kanaList; //contains all of the kana sprites that are added in Unity, not Visual Studio
     public List<AudioClip> soundList; //conrains all of the kana sounds that are added in Unity, not Visual Studio
-    private Camera cam;
+
     //class methods
-    void Awake()
-    {
-        cam = Camera.main;
-    }
     public List<int> FiveUniqueRandomNumbers()
     {
         List<int> fiveRandomNumbers = new List<int>();
@@ -56,15 +52,15 @@ public class List_Of_Kana : MonoBehaviour
         AudioClip newSound = theList[listIndex]; //chooses a random kana from the array
         oldSprite.GetComponent<AudioSource>().clip = newSound;
     }
-    public void CreateKanaSprite() //uploads 5 random kana to be shown in the game 
+    public void CreateKanaSprite() //uploads 5 random kana and their sounds to be shown in the game 
     {
-        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers();
+        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(); //chooses a random number between 0 and X
 
-        int firstRandomNumber = fiveRandomNumbers[0]; //chooses a random number between 0 and X
-        int secondRandomNumber = fiveRandomNumbers[1]; //chooses a random number between 0 and X
-        int thirdRandomNumber = fiveRandomNumbers[2]; //chooses a random number between 0 and X
-        int fourthRandomNumber = fiveRandomNumbers[3]; //chooses a random number between 0 and X
-        int fifthRandomNumber = fiveRandomNumbers[4]; //chooses a random number between 0 and X
+        int firstRandomNumber = fiveRandomNumbers[0]; 
+        int secondRandomNumber = fiveRandomNumbers[1];
+        int thirdRandomNumber = fiveRandomNumbers[2];
+        int fourthRandomNumber = fiveRandomNumbers[3];
+        int fifthRandomNumber = fiveRandomNumbers[4];
 
         //uploading the new kana sprites to Unity
         ChangeSprite(kanaList, firstRandomNumber, kanaPosition01);
@@ -80,8 +76,11 @@ public class List_Of_Kana : MonoBehaviour
         ChangeSound(soundList, fourthRandomNumber, soundPosition04);
         ChangeSound(soundList, fifthRandomNumber, soundPosition05);
     }
-    void Start() // Update is called once per frame 
+    void Start() //called before the first frame update
     {
         CreateKanaSprite();
+    }
+    void Update() //called once per frame
+    {
     }
 }
