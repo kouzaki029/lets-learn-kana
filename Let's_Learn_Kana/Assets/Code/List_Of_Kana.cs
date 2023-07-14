@@ -64,7 +64,7 @@ public class List_Of_Kana : MonoBehaviour
         GameObject newSound = Instantiate(spritePosition, defaultSpritePosition, quaternion);
         newSound.GetComponent<AudioSource>().clip = firstSoundSprite; //copues the audio clip from the chosen random sound into the new sound sprite 
 
-        Destroy(soundPosition01); //deletes the old game object
+        Destroy(spritePosition); //deletes the old game object
     }
     public void CreateKanaSprite() //uploads 5 random kana to be shown in the game 
     {
@@ -76,25 +76,19 @@ public class List_Of_Kana : MonoBehaviour
         int fourthRandomNumber = fiveRandomNumbers[3]; //chooses a random number between 0 and X
         int fifthRandomNumber = fiveRandomNumbers[4]; //chooses a random number between 0 and X
 
-        //uploading the kana sprites to Unity
+        //uploading the new kana sprites to Unity
         ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
         ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
         ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
         ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
         ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
 
-        //uploading the kana sounds to Unity
+        //uploading the new kana sounds to Unity
         ChangeSound(soundList, firstRandomNumber, soundPosition01);
         ChangeSound(soundList, secondRandomNumber, soundPosition02);
         ChangeSound(soundList, thirdRandomNumber, soundPosition03);
         ChangeSound(soundList, fourthRandomNumber, soundPosition04);
         ChangeSound(soundList, fifthRandomNumber, soundPosition05);
-    }
-    Vector3 GetMousePos()
-    {
-        var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        return mousePos;
     }
     void Start() // Update is called once per frame 
     {
