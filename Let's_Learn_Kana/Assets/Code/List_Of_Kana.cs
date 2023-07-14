@@ -44,7 +44,7 @@ public class List_Of_Kana : MonoBehaviour
         }
         return fiveRandomNumbers;
     }
-    public void ChangeSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
+    public void ChangeKanaSprite(List<Sprite> theList, int listIndex, GameObject spritePosition)
     {
         Sprite theSprite = theList[listIndex]; //chooses a random sprite from the array
         Vector3 defaulSpritePosition = spritePosition.transform.position; //copies sprite's position's and makes it the default position for the first sprite
@@ -63,11 +63,11 @@ public class List_Of_Kana : MonoBehaviour
         int fourthRandomNumber = fiveRandomNumbers[3]; //chooses a random number between 0 and X
         int fifthRandomNumber = fiveRandomNumbers[4]; //chooses a random number between 0 and X
 
-        ChangeSprite(kanaList, firstRandomNumber, kanaPosition01);
-        ChangeSprite(kanaList, secondRandomNumber, kanaPosition02);
-        ChangeSprite(kanaList, thirdRandomNumber, kanaPosition03);
-        ChangeSprite(kanaList, fourthRandomNumber, kanaPosition04);
-        ChangeSprite(kanaList, fifthRandomNumber, kanaPosition05);
+        ChangeKanaSprite(kanaList, firstRandomNumber, kanaPosition01);
+        ChangeKanaSprite(kanaList, secondRandomNumber, kanaPosition02);
+        ChangeKanaSprite(kanaList, thirdRandomNumber, kanaPosition03);
+        ChangeKanaSprite(kanaList, fourthRandomNumber, kanaPosition04);
+        ChangeKanaSprite(kanaList, fifthRandomNumber, kanaPosition05);
 
         //uploading the kana sound to Unity
         Quaternion quaternion = new Quaternion(0, 0, 0, 0);  //default Quanternion
@@ -100,41 +100,6 @@ public class List_Of_Kana : MonoBehaviour
         newSound = Instantiate(soundPosition05, soundPosition, quaternion);
         newSound.GetComponent<AudioSource>().clip = fifthSoundSprite;
         Destroy(soundPosition05);
-
-        if (GetMousePos() == soundPosition01.transform.position)
-        {
-            GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip); //Play script
-            //soundPlayer = soundPosition01.GetComponent<AudioSource>();
-            //soundPlayer.Play();
-        }
-        else if (GetMousePos() == soundPosition02.transform.position)
-        {
-            GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip); //Play script
-            //soundPlayer = soundPosition02.GetComponent<AudioSource>();
-            //soundPlayer.Play();
-        }
-        else if (GetMousePos() == soundPosition03.transform.position)
-        {
-            GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip); //Play script
-            //soundPlayer = soundPosition03.GetComponent<AudioSource>();
-            //soundPlayer.Play();
-        }
-        else if (GetMousePos() == soundPosition04.transform.position)
-        {
-            GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip); //Play script
-            //soundPlayer = soundPosition04.GetComponent<AudioSource>();
-            //soundPlayer.Play();
-        }
-        else if (GetMousePos() == soundPosition05.transform.position)
-        {
-            GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip); //Play script
-            //soundPlayer = soundPosition05.GetComponent<AudioSource>();
-            //soundPlayer.Play();
-        }
-        else
-        {
-            //do nothing
-        }
     }
     Vector3 GetMousePos()
     {
