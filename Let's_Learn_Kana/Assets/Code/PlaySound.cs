@@ -5,33 +5,10 @@ using UnityEngine;
 public class PlaySound : MonoBehaviour
 {
 // class variables
-    //private Vector3 dragOffset;
-    //private Camera cam;
     public AudioSource soundPlayer;
 
-    // class methods
-    /*void Awake()
-    {
-        cam = Camera.main;
-    }
+// class methods
     void OnMouseDown()
-    {
-        dragOffset = (transform.position) - (GetMousePos());
-        soundPlayer = GetComponent<AudioSource>();
-        soundPlayer.Play();
-    }
-    void OnMouseDrag()
-    {
-        transform.position = GetMousePos() + dragOffset;
-    }
-
-    Vector3 GetMousePos()
-    {
-        var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        return mousePos;
-    }*/
-    public void PlaySoundEffect()
     {
         soundPlayer = GetComponent<AudioSource>();
         soundPlayer.Play();

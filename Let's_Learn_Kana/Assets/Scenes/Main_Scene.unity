@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 44571412}
   - component: {fileID: 44571411}
   - component: {fileID: 44571413}
-  - component: {fileID: 44571414}
   - component: {fileID: 44571415}
+  - component: {fileID: 44571416}
+  - component: {fileID: 44571417}
   m_Layer: 0
   m_Name: SpeakerSprite_02
   m_TagString: Untagged
@@ -280,19 +281,6 @@ PolygonCollider2D:
       - {x: 0.21499999, y: -0.08}
       - {x: 0.225, y: -0.08}
   m_UseDelaunayMesh: 0
---- !u!114 &44571414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44571410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!82 &44571415
 AudioSource:
   m_ObjectHideFlags: 0
@@ -389,6 +377,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &44571416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44571410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9873b0c877115454ba27b1b3e9851ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 0}
+--- !u!114 &44571417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44571410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &142827401
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!1 &220444998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!1 &496201338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,7 +1809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!1 &861193643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,8 +1820,9 @@ GameObject:
   - component: {fileID: 861193645}
   - component: {fileID: 861193644}
   - component: {fileID: 861193647}
-  - component: {fileID: 861193646}
   - component: {fileID: 861193648}
+  - component: {fileID: 861193650}
+  - component: {fileID: 861193651}
   m_Layer: 0
   m_Name: SpeakerSprite_01
   m_TagString: Untagged
@@ -1887,19 +1897,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &861193646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861193643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!60 &861193647
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2066,6 +2063,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &861193650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861193643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9873b0c877115454ba27b1b3e9851ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 0}
+--- !u!114 &861193651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861193643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923355826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,7 +2504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!1 &1388172334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,8 +2515,9 @@ GameObject:
   - component: {fileID: 1388172336}
   - component: {fileID: 1388172335}
   - component: {fileID: 1388172337}
-  - component: {fileID: 1388172338}
   - component: {fileID: 1388172339}
+  - component: {fileID: 1388172340}
+  - component: {fileID: 1388172341}
   m_Layer: 0
   m_Name: SpeakerSprite_05
   m_TagString: Untagged
@@ -2640,19 +2662,6 @@ PolygonCollider2D:
       - {x: 0.21499999, y: -0.08}
       - {x: 0.225, y: -0.08}
   m_UseDelaunayMesh: 0
---- !u!114 &1388172338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388172334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!82 &1388172339
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2749,6 +2758,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1388172340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388172334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9873b0c877115454ba27b1b3e9851ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 0}
+--- !u!114 &1388172341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388172334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1406317951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,8 +2794,9 @@ GameObject:
   - component: {fileID: 1406317953}
   - component: {fileID: 1406317952}
   - component: {fileID: 1406317954}
-  - component: {fileID: 1406317955}
   - component: {fileID: 1406317956}
+  - component: {fileID: 1406317957}
+  - component: {fileID: 1406317958}
   m_Layer: 0
   m_Name: SpeakerSprite_03
   m_TagString: Untagged
@@ -2906,19 +2941,6 @@ PolygonCollider2D:
       - {x: 0.21499999, y: -0.08}
       - {x: 0.225, y: -0.08}
   m_UseDelaunayMesh: 0
---- !u!114 &1406317955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406317951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!82 &1406317956
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3015,6 +3037,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1406317957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406317951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9873b0c877115454ba27b1b3e9851ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 0}
+--- !u!114 &1406317958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406317951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1881643380
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,8 +3073,9 @@ GameObject:
   - component: {fileID: 1881643382}
   - component: {fileID: 1881643381}
   - component: {fileID: 1881643383}
-  - component: {fileID: 1881643384}
   - component: {fileID: 1881643385}
+  - component: {fileID: 1881643386}
+  - component: {fileID: 1881643387}
   m_Layer: 0
   m_Name: SpeakerSprite_04
   m_TagString: Untagged
@@ -3172,19 +3220,6 @@ PolygonCollider2D:
       - {x: 0.21499999, y: -0.08}
       - {x: 0.225, y: -0.08}
   m_UseDelaunayMesh: 0
---- !u!114 &1881643384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881643380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
 --- !u!82 &1881643385
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3281,3 +3316,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1881643386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881643380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9873b0c877115454ba27b1b3e9851ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 0}
+--- !u!114 &1881643387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881643380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
