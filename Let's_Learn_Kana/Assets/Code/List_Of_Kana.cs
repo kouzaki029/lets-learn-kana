@@ -19,20 +19,20 @@ public class List_Of_Kana : MonoBehaviour
     public List<AudioClip> soundList; //conrains all of the kana sounds that are added in Unity, not Visual Studio
 
     //class methods
-    public List<int> FiveUniqueRandomNumbers()
+    public List<int> FiveUniqueRandomNumbers(int maximum)
     {
         List<int> fiveRandomNumbers = new List<int>();
 
         while (fiveRandomNumbers.Capacity < 5)
         {
             int min = 0;
-            int max = kanaList.Capacity;
+            int max = maximum;
 
-            int randomKana = Random.Range(min, max); //chooses a random number from 0 to X
+            int randomNumber = Random.Range(min, max); //chooses a random number from 0 to X
 
-            if (!(fiveRandomNumbers.Contains(randomKana))) //sees if the random number is NOT already inside the list
+            if (!(fiveRandomNumbers.Contains(randomNumber))) //sees if the random number is NOT already inside the list
             {
-                fiveRandomNumbers.Add(randomKana); //add the random number to the list
+                fiveRandomNumbers.Add(randomNumber); //add the random number to the list
                 // fiveRandomNumber's capacity increases by 1
             }
             //else
@@ -54,9 +54,9 @@ public class List_Of_Kana : MonoBehaviour
     }
     public void CreateKanaSprite() //uploads 5 random kana and their sounds to be shown in the game 
     {
-        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(); //chooses 5 random numbers between 0 and X
+        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(kanaList.Capacity); //chooses 5 random numbers between 0 and X
 
-        int firstRandomNumber = fiveRandomNumbers[0]; 
+        int firstRandomNumber = fiveRandomNumbers[0];
         int secondRandomNumber = fiveRandomNumbers[1];
         int thirdRandomNumber = fiveRandomNumbers[2];
         int fourthRandomNumber = fiveRandomNumbers[3];
