@@ -54,7 +54,7 @@ public class List_Of_Kana : MonoBehaviour
     }
     public void CreateKanaSprite() //uploads 5 random kana and their sounds to be shown in the game 
     {
-        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(); //chooses a random number between 0 and X
+        List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(); //chooses 5 random numbers between 0 and X
 
         int firstRandomNumber = fiveRandomNumbers[0]; 
         int secondRandomNumber = fiveRandomNumbers[1];
@@ -62,7 +62,7 @@ public class List_Of_Kana : MonoBehaviour
         int fourthRandomNumber = fiveRandomNumbers[3];
         int fifthRandomNumber = fiveRandomNumbers[4];
 
-        //uploading the new kana sprites to Unity//
+        //uploading the new kana sprites to Unity
         ChangeSprite(kanaList, firstRandomNumber, kanaPosition01);
         ChangeSprite(kanaList, secondRandomNumber, kanaPosition02);
         ChangeSprite(kanaList, thirdRandomNumber, kanaPosition03);
