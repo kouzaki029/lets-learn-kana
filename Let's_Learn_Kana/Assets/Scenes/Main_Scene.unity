@@ -209,7 +209,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &44571413
 PolygonCollider2D:
@@ -793,7 +793,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &204826458
 MonoBehaviour:
@@ -1096,7 +1096,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &220445002
 MonoBehaviour:
@@ -1110,6 +1110,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &412620292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412620293}
+  - component: {fileID: 412620294}
+  m_Layer: 0
+  m_Name: KanaManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412620293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412620292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412620294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412620292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9488f7a79c3451aaddc9541ac28023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
+  kanaList:
+  - {fileID: 21300000, guid: 0a3a74b0a74604d0497acbbdf2364a4e, type: 3}
+  - {fileID: 21300000, guid: 92488f649b75d4a50b262987e9191ed6, type: 3}
+  - {fileID: 21300000, guid: e8203548251514006a92e640e8efbe12, type: 3}
+  - {fileID: 21300000, guid: 0dcc9af6e4c1e46e383fe79ae68c15dd, type: 3}
+  - {fileID: 21300000, guid: aa2e0280d175548d4b90bd8b6a511bf3, type: 3}
+  - {fileID: 21300000, guid: 277f6084dc6c645a8a48e3699ec013a9, type: 3}
+  - {fileID: 21300000, guid: d6759ce243aea4048888cefb8b4ba898, type: 3}
+  - {fileID: 21300000, guid: c4ac13d3df33c4bd0a6c4c2596c8c1aa, type: 3}
+  - {fileID: 21300000, guid: eaf99e122e86d4728bb76bad284c4d3b, type: 3}
+  - {fileID: 21300000, guid: 3970863881c5e4e7ab8fa6ee97b8ac6c, type: 3}
+  soundList:
+  - {fileID: 8300000, guid: 6ea86a0aeecf84823aefbf3071ba310c, type: 3}
+  - {fileID: 8300000, guid: 2992032f83da64e3d9ad2ca333ab98a5, type: 3}
+  - {fileID: 8300000, guid: 8338983e0e0ef4e64afb9f0edf0888c0, type: 3}
+  - {fileID: 8300000, guid: df49a92b55c2e42f69e9b60ebb6a1d10, type: 3}
+  - {fileID: 8300000, guid: 07b26015a614c4ff08ae0cb16808c203, type: 3}
+  - {fileID: 8300000, guid: 3d35a678606b94ff386aa90997d3246a, type: 3}
+  - {fileID: 8300000, guid: e48bd4be78bc04f82aacda618375c646, type: 3}
+  - {fileID: 8300000, guid: 463a2c56c093347b79df2dcf33eb9c5e, type: 3}
+  - {fileID: 8300000, guid: 16e1ac401b6664e8b8f1878420f093e8, type: 3}
+  - {fileID: 8300000, guid: e8e951fcbd80d4c19bcfb21ed70b7fd8, type: 3}
 --- !u!1 &496201338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1475,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &496201342
 MonoBehaviour:
@@ -1795,7 +1871,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &599188496
 MonoBehaviour:
@@ -1895,7 +1971,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &861193647
 PolygonCollider2D:
@@ -2099,7 +2175,6 @@ GameObject:
   - component: {fileID: 923355829}
   - component: {fileID: 923355828}
   - component: {fileID: 923355827}
-  - component: {fileID: 923355830}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2157,50 +2232,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &923355830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923355826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9488f7a79c3451aaddc9541ac28023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 599188492}
-  kanaPosition02: {fileID: 220444998}
-  kanaPosition03: {fileID: 496201338}
-  kanaPosition04: {fileID: 204826454}
-  kanaPosition05: {fileID: 927153945}
-  soundPosition01: {fileID: 861193643}
-  soundPosition02: {fileID: 44571410}
-  soundPosition03: {fileID: 1406317951}
-  soundPosition04: {fileID: 1881643380}
-  soundPosition05: {fileID: 1388172334}
-  kanaList:
-  - {fileID: 21300000, guid: 0a3a74b0a74604d0497acbbdf2364a4e, type: 3}
-  - {fileID: 21300000, guid: 92488f649b75d4a50b262987e9191ed6, type: 3}
-  - {fileID: 21300000, guid: e8203548251514006a92e640e8efbe12, type: 3}
-  - {fileID: 21300000, guid: 0dcc9af6e4c1e46e383fe79ae68c15dd, type: 3}
-  - {fileID: 21300000, guid: aa2e0280d175548d4b90bd8b6a511bf3, type: 3}
-  - {fileID: 21300000, guid: 277f6084dc6c645a8a48e3699ec013a9, type: 3}
-  - {fileID: 21300000, guid: d6759ce243aea4048888cefb8b4ba898, type: 3}
-  - {fileID: 21300000, guid: c4ac13d3df33c4bd0a6c4c2596c8c1aa, type: 3}
-  - {fileID: 21300000, guid: eaf99e122e86d4728bb76bad284c4d3b, type: 3}
-  - {fileID: 21300000, guid: 3970863881c5e4e7ab8fa6ee97b8ac6c, type: 3}
-  soundList:
-  - {fileID: 8300000, guid: 6ea86a0aeecf84823aefbf3071ba310c, type: 3}
-  - {fileID: 8300000, guid: 2992032f83da64e3d9ad2ca333ab98a5, type: 3}
-  - {fileID: 8300000, guid: 8338983e0e0ef4e64afb9f0edf0888c0, type: 3}
-  - {fileID: 8300000, guid: df49a92b55c2e42f69e9b60ebb6a1d10, type: 3}
-  - {fileID: 8300000, guid: 07b26015a614c4ff08ae0cb16808c203, type: 3}
-  - {fileID: 8300000, guid: 3d35a678606b94ff386aa90997d3246a, type: 3}
-  - {fileID: 8300000, guid: e48bd4be78bc04f82aacda618375c646, type: 3}
-  - {fileID: 8300000, guid: 463a2c56c093347b79df2dcf33eb9c5e, type: 3}
-  - {fileID: 8300000, guid: 16e1ac401b6664e8b8f1878420f093e8, type: 3}
-  - {fileID: 8300000, guid: e8e951fcbd80d4c19bcfb21ed70b7fd8, type: 3}
 --- !u!1 &927153945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2521,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &927153949
 MonoBehaviour:
@@ -2590,7 +2621,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1388172337
 PolygonCollider2D:
@@ -2869,7 +2900,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1406317954
 PolygonCollider2D:
@@ -3148,7 +3179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1881643383
 PolygonCollider2D:

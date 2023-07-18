@@ -18,7 +18,7 @@ public class List_Of_Kana : MonoBehaviour
     public List<Sprite> kanaList; //contains all of the kana sprites that are added in Unity, not Visual Studio
     public List<AudioClip> soundList; //conrains all of the kana sounds that are added in Unity, not Visual Studio
 
-    //class methods
+//class methods
     public List<int> FiveUniqueRandomNumbers(int maximum) //chooses 5 unique random numbers between 0 and maximum (where maximum is also a possibe random number) 
     {
         List<int> fiveRandomNumbers = new List<int>();
@@ -114,5 +114,33 @@ public class List_Of_Kana : MonoBehaviour
     }
     void Update() //called once per frame
     {
+    }
+
+    //class variables
+    private Vector3 dragOffset;
+    private Camera cam;
+
+    //class methods
+    void Awake()
+    {
+        cam = Camera.main;
+    }
+    void OnMouseDown()
+    {
+        dragOffset = (transform.position) - (GetMousePos());
+    }
+    void OnMouseDrag()
+    {
+        transform.position = GetMousePos() + dragOffset;
+    }
+    Vector3 GetMousePos()
+    {
+        var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+        return mousePos;
+    }
+    private void OnMouseUp()
+    {
+        Debug.Log("mouse is up.");
     }
 }
