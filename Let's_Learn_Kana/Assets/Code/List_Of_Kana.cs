@@ -115,32 +115,4 @@ public class List_Of_Kana : MonoBehaviour
     void Update() //called once per frame
     {
     }
-
-    //class variables
-    private Vector3 dragOffset;
-    private Camera cam;
-
-    //class methods
-    void Awake()
-    {
-        cam = Camera.main;
-    }
-    void OnMouseDown()
-    {
-        dragOffset = (transform.position) - (GetMousePos());
-    }
-    void OnMouseDrag()
-    {
-        transform.position = GetMousePos() + dragOffset;
-    }
-    Vector3 GetMousePos()
-    {
-        var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        return mousePos;
-    }
-    private void OnMouseUp()
-    {
-        Debug.Log("mouse is up.");
-    }
 }

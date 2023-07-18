@@ -203,13 +203,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44571410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.6, y: -2.47, z: 0}
   m_LocalScale: {x: 1.3056539, y: 1.986982, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &44571413
 PolygonCollider2D:
@@ -402,6 +402,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
 --- !u!1 &142827401
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,13 +797,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204826454}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.6, y: 2.4133, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &204826458
 MonoBehaviour:
@@ -807,6 +817,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
 --- !u!1 &220444998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,13 +1110,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220444998}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.6, y: 2.4133, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &220445002
 MonoBehaviour:
@@ -1110,6 +1130,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
 --- !u!1 &412620292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1168,17 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 861193645}
+  - {fileID: 44571412}
+  - {fileID: 1406317953}
+  - {fileID: 1881643382}
+  - {fileID: 1388172336}
+  - {fileID: 599188495}
+  - {fileID: 220445001}
+  - {fileID: 496201341}
+  - {fileID: 204826457}
+  - {fileID: 927153948}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1469,13 +1509,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496201338}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.4133, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &496201342
 MonoBehaviour:
@@ -1489,6 +1529,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,13 +1915,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599188492}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.98, y: 2.4133, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &599188496
 MonoBehaviour:
@@ -1885,6 +1935,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &861193643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,13 +2025,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861193643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.98, y: -2.4133, z: 0}
   m_LocalScale: {x: 1.3056539, y: 1.986982, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &861193647
 PolygonCollider2D:
@@ -2164,6 +2224,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &923355826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,13 +2585,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927153945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.2, y: 2.4133, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &927153949
 MonoBehaviour:
@@ -2535,6 +2605,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
 --- !u!1 &1388172334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,13 +2695,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388172334}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.2, y: -2.4133, z: 0}
   m_LocalScale: {x: 1.3056539, y: 1.986982, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1388172337
 PolygonCollider2D:
@@ -2814,6 +2894,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
 --- !u!1 &1406317951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,13 +2984,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406317951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -2.4133, z: 0}
   m_LocalScale: {x: 1.3056539, y: 1.986982, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1406317954
 PolygonCollider2D:
@@ -3093,6 +3183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
 --- !u!1 &1881643380
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,13 +3273,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881643380}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.6, y: -2.41, z: 0}
   m_LocalScale: {x: 1.3056539, y: 1.986982, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 412620293}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1881643383
 PolygonCollider2D:
@@ -3372,3 +3472,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kanaPosition01: {fileID: 0}
+  kanaPosition02: {fileID: 0}
+  kanaPosition03: {fileID: 0}
+  kanaPosition04: {fileID: 0}
+  kanaPosition05: {fileID: 0}
+  soundPosition01: {fileID: 0}
+  soundPosition02: {fileID: 0}
+  soundPosition03: {fileID: 0}
+  soundPosition04: {fileID: 0}
+  soundPosition05: {fileID: 0}
