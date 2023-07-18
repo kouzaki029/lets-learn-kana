@@ -108,11 +108,75 @@ public class List_Of_Kana : MonoBehaviour
         ChangeSound(soundList, fourthRandomIndex, randomSpritePosition[3]);
         ChangeSound(soundList, fifthRandomIndex, randomSpritePosition[4]);
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        // When target is hit
+        if (col.gameObject.tag == "kanaPosition01")
+        {
+            Debug.Log("Target was Hit!");
+            //Destroy(col.gameObject);
+        }
+    }
+
+    public void CheckAnswer()
+    {
+        //remembering where the sprites originally used to be
+        Vector3 originalKanaPosition01 = new(-6.98f, 2.41f, 0.00f);
+        Vector3 originalKanaPosition02 = new(-3.60f, 2.41f, 0.00f);
+        Vector3 originalKanaPosition03 = new(0.00f, 2.41f, 0.00f);
+        Vector3 originalKanaPosition04 = new(3.60f, 2.41f, 0.00f);
+        Vector3 originalKanaPosition05 = new(6.98f, 2.41f, 0.00f);
+        Vector3 originalSoundPosition01 = new(-6.98f, -2.41f, 0.00f);
+        Vector3 originalSoundPosition02 = new(-3.60f, -2.41f, 0.00f);
+        Vector3 originalSoundPosition03 = new(0.00f, -2.41f, 0.00f);
+        Vector3 originalSoundPosition04 = new(3.60f, -2.41f, 0.00f);
+        Vector3 originalSoundPosition05 = new(6.98f, -2.41f, 0.00f);
+
+        //soundPosition01.SetActive(false);
+        /*
+        if (sound and kana match)
+        {
+           //delete/hide the two game objects
+        }
+        else
+        {
+          
+        }
+        */
+
+
+        if (soundPosition01.transform.position == kanaPosition01.transform.position)//soundPosition01.GetComponent<Collider2D>().IsTouching(kanaPosition01.GetComponent<Collider2D>()) )
+        {
+            if (soundPosition01.GetComponent<AudioSource>().clip.name == kanaPosition01.GetComponent<SpriteRenderer>().sprite.name)
+            {
+                soundPosition01.SetActive(false); //hides soundPoisition01?
+                kanaPosition01.SetActive(false); //hides kanaPosition01?
+            }
+            else
+            {
+                //soundPosition01.transform.position = originalSoundPosition01;
+            }
+        }
+        else if (soundPosition01.transform.position == kanaPosition02.transform.position)
+        {
+            if (soundPosition01.GetComponent<AudioSource>().clip.name == kanaPosition01.GetComponent<SpriteRenderer>().sprite.name)
+            {
+                soundPosition01.SetActive(false); //hides soundPoisition01?
+                kanaPosition01.SetActive(false); //hides kanaPosition01?
+            }
+        }
+    }
     void Start() //called before the first frame update
     {
         CreateKanaSprite();
+        //Debug.Log(soundPosition01.GetComponent<AudioSource>().clip.name);
+        //Debug.Log(kanaPosition01.GetComponent<SpriteRenderer>().sprite.name);
     }
     void Update() //called once per frame
     {
+        soundPosition01.SetActive(true); //hides soundPoisition01?
+        kanaPosition01.SetActive(true);
+
+        CheckAnswer();
     }
 }

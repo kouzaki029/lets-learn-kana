@@ -44,7 +44,7 @@ public class ScratchPad : MonoBehaviour
     }
     void Start() //called before the first frame update
     {
-        myFunction();
+        //myFunction();
     }
     void Update() //called once per frame
     {
