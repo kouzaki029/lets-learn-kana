@@ -42,6 +42,14 @@ public class List_Of_Kana : MonoBehaviour
             }
             */
         }
+
+        //Debug.Log("fiveRandomNumbers.Capacity " + fiveRandomNumbers.Capacity);
+        /*foreach (int i in fiveRandomNumbers)
+        {
+            Debug.Log("Random number is " + i);
+        }
+        Debug.Log("\n");*/
+
         return fiveRandomNumbers;
     }
     public GameObject[] randomizeSpritePosition(GameObject spritePosition01, GameObject spritePosition02, GameObject spritePosition03, GameObject spritePosition04, GameObject spritePosition05)
@@ -78,7 +86,7 @@ public class List_Of_Kana : MonoBehaviour
         AudioClip newSound = theList[listIndex]; //chooses a random kana from the array
         oldSprite.GetComponent<AudioSource>().clip = newSound;
     }
-    public void CreateKanaSprite() //uploads 5 random kana and their sounds to be shown in the game 
+    public void Spawn() //uploads 5 random kana and their sounds to be shown in the game 
     {
         //chooses 5 random numbers between 0 and X (including the last index of kanaList)...(i.e., choosing 5 random kana and their sounds from the list)
         List<int> fiveRandomNumbers = FiveUniqueRandomNumbers(kanaList.Capacity);
@@ -108,11 +116,43 @@ public class List_Of_Kana : MonoBehaviour
         ChangeSound(soundList, fourthRandomIndex, randomSpritePosition[3]);
         ChangeSound(soundList, fifthRandomIndex, randomSpritePosition[4]);
     }
+    void Refresh()
+    {
+        //make sure all of the sprites are not hiding and are visible
+        kanaPosition01.SetActive(true);
+        kanaPosition02.SetActive(true);
+        kanaPosition03.SetActive(true);
+        kanaPosition04.SetActive(true);
+        kanaPosition05.SetActive(true);
+        soundPosition01.SetActive(true);
+        soundPosition02.SetActive(true);
+        soundPosition03.SetActive(true);
+        soundPosition04.SetActive(true);
+        soundPosition05.SetActive(true);
+
+        //makes sure all of the sprites are in their proper places when they respawn
+        kanaPosition01.transform.position   =   new(-6.98f, 2.41f,  0.00f);
+        kanaPosition02.transform.position   =   new(-3.60f, 2.41f,  0.00f);
+        kanaPosition03.transform.position   =   new(0.00f,  2.41f,  0.00f);
+        kanaPosition04.transform.position   =   new(3.60f,  2.41f,  0.00f);
+        kanaPosition05.transform.position   =   new(6.98f,  2.41f,  0.00f);
+        soundPosition01.transform.position  =   new(-6.98f, -2.41f, 0.00f);
+        soundPosition02.transform.position  =   new(-3.60f, -2.41f, 0.00f);
+        soundPosition03.transform.position  =   new(0.00f,  -2.41f, 0.00f);
+        soundPosition04.transform.position  =   new(3.60f,  -2.41f, 0.00f);
+        soundPosition05.transform.position  =   new(6.98f,  -2.41f, 0.00f);
+    }
     void Start() //called before the first frame update
     {
-        CreateKanaSprite();
+        Spawn();
     }
     void Update() //called once per frame
     {
+        if (!(kanaPosition01.activeSelf) && !(kanaPosition02.activeSelf) && !(kanaPosition03.activeSelf) && !(kanaPosition04.activeSelf) && !(kanaPosition05.activeSelf) && !(soundPosition01.activeSelf) && !(soundPosition02.activeSelf) && !(soundPosition03.activeSelf) && !(soundPosition04.activeSelf) && !(soundPosition05.activeSelf))
+        {
+            //Debug.Log("Time to respawn!");
+            Refresh(); //makes sure all of the sprites are visible and they're back in their original places
+            Spawn();
+        }
     }
 }
