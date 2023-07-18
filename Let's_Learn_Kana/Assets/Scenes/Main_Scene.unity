@@ -402,16 +402,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &142827401
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,16 +817,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &220444998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,16 +1130,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &412620292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,16 +1529,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,16 +2605,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &1388172334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,16 +2894,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &1406317951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,16 +3183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
 --- !u!1 &1881643380
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,13 +3472,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f640cf8b8153486d8fb99ec3ae733b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanaPosition01: {fileID: 0}
-  kanaPosition02: {fileID: 0}
-  kanaPosition03: {fileID: 0}
-  kanaPosition04: {fileID: 0}
-  kanaPosition05: {fileID: 0}
-  soundPosition01: {fileID: 0}
-  soundPosition02: {fileID: 0}
-  soundPosition03: {fileID: 0}
-  soundPosition04: {fileID: 0}
-  soundPosition05: {fileID: 0}
+  kanaPosition01: {fileID: 599188492}
+  kanaPosition02: {fileID: 220444998}
+  kanaPosition03: {fileID: 496201338}
+  kanaPosition04: {fileID: 204826454}
+  kanaPosition05: {fileID: 927153945}
+  soundPosition01: {fileID: 861193643}
+  soundPosition02: {fileID: 44571410}
+  soundPosition03: {fileID: 1406317951}
+  soundPosition04: {fileID: 1881643380}
+  soundPosition05: {fileID: 1388172334}
