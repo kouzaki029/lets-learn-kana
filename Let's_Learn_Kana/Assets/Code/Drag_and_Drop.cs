@@ -9,7 +9,7 @@ public class Drag_and_Drop : MonoBehaviour
     private Camera cam;
     //private Vector3 originalPosition;
 
-//class methods
+    //class methods
     void Awake()
     {
         cam = Camera.main;
@@ -22,17 +22,6 @@ public class Drag_and_Drop : MonoBehaviour
     void OnMouseDrag()
     {
         transform.position = GetMousePos() + dragOffset;
-    }
-    private void OnMouseUp()
-    {
-        //if (sound and kana match)
-        //{
-        //   delete/hide the two game objects
-        //}
-        //else
-        //{
-        //Debug.Log(transform.position = originalPosition);
-        //}
     }
     Vector3 GetMousePos()
     {

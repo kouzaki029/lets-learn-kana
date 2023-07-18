@@ -108,18 +108,9 @@ public class List_Of_Kana : MonoBehaviour
         ChangeSound(soundList, fourthRandomIndex, randomSpritePosition[3]);
         ChangeSound(soundList, fifthRandomIndex, randomSpritePosition[4]);
     }
-    void OnCollisionEnter2D(Collision2D col)
+    void OnMouseUp()
     {
-        // When target is hit
-        if (col.gameObject.tag == "kanaPosition01")
-        {
-            Debug.Log("Target was Hit!");
-            //Destroy(col.gameObject);
-        }
-    }
-
-    public void CheckAnswer()
-    {
+        //xDebug.Log("Mouse is up.");
         //remembering where the sprites originally used to be
         Vector3 originalKanaPosition01 = new(-6.98f, 2.41f, 0.00f);
         Vector3 originalKanaPosition02 = new(-3.60f, 2.41f, 0.00f);
@@ -145,7 +136,7 @@ public class List_Of_Kana : MonoBehaviour
         */
 
 
-        if (soundPosition01.transform.position == kanaPosition01.transform.position)//soundPosition01.GetComponent<Collider2D>().IsTouching(kanaPosition01.GetComponent<Collider2D>()) )
+        if (Vector3.Distance(soundPosition01.transform.position, kanaPosition01.transform.position) < .3)//soundPosition01.GetComponent<Collider2D>().IsTouching(kanaPosition01.GetComponent<Collider2D>()) )
         {
             if (soundPosition01.GetComponent<AudioSource>().clip.name == kanaPosition01.GetComponent<SpriteRenderer>().sprite.name)
             {
@@ -177,6 +168,6 @@ public class List_Of_Kana : MonoBehaviour
         soundPosition01.SetActive(true); //hides soundPoisition01?
         kanaPosition01.SetActive(true);
 
-        CheckAnswer();
+        OnMouseUp();
     }
 }
