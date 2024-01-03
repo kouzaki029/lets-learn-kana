@@ -17,6 +17,8 @@ public class List_Of_Kana : MonoBehaviour
     public GameObject       soundPosition05;    //default sound location #5
     public List<Sprite>     kanaList;           //contains all of the kana sprites that are added in Unity, not Visual Studio
     public List<AudioClip>  soundList;          //conrains all of the kana sounds that are added in Unity, not Visual Studio
+    public List<Sprite>     incorrectKanas;
+    public List<AudioClip>  incorrectSounds;
 
 //class methods
     public List<int>    FiveUniqueRandomNumbers(int maximum) //chooses 5 unique random numbers between 0 and maximum (where maximum is also a possibe random number) 
@@ -158,6 +160,9 @@ public class List_Of_Kana : MonoBehaviour
     }
     void                Update() //called once per frame
     {
+        //checking if the user entered any kana+sounds incorrectly, if so document them
+        getIncorrect();
+
         if ( kanaList.Count > 0 && soundList.Count > 0 )
         {
             //removing the used sprite+sound from the pool of sounds+sprites
@@ -199,5 +204,15 @@ public class List_Of_Kana : MonoBehaviour
             }
         }
 
+    }
+    void                getIncorrect() //finds which kana and sounds the user answered incorrectly
+    {
+        // Call function from another script
+        Drag_and_Drop script1 = GetComponent<Drag_and_Drop>();
+        if (script1 != null)
+        {
+            incorrectKanas.AddRange(script1.sendIncorrectKana());
+            incorrectSounds.AddRange(script1.sendIncorrectSound());
+        }
     }
 }

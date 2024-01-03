@@ -7,18 +7,21 @@ public class Drag_and_Drop : MonoBehaviour
 //class variables
     private Vector3     dragOffset;
     private Camera      cam;
-    public  GameObject  kanaPosition01; //default kana location #1
-    public  GameObject  kanaPosition02; //default kana location #2
-    public  GameObject  kanaPosition03; //default kana location #3
-    public  GameObject  kanaPosition04; //default kana location #4
-    public  GameObject  kanaPosition05; //default kana location #5
+    public  GameObject  kanaPosition01;  //default kana location #1
+    public  GameObject  kanaPosition02;  //default kana location #2
+    public  GameObject  kanaPosition03;  //default kana location #3
+    public  GameObject  kanaPosition04;  //default kana location #4
+    public  GameObject  kanaPosition05;  //default kana location #5
     public  GameObject  soundPosition01; //default sound location #1
     public  GameObject  soundPosition02; //default sound location #2
     public  GameObject  soundPosition03; //default sound location #3
     public  GameObject  soundPosition04; //default sound location #4
     public  GameObject  soundPosition05; //default sound location #5
+    public List<Sprite>     incorrectKana; //contains all of the kana sprites that are added in Unity, not Visual Studio
+    public List<AudioClip>  incorrectSound; //conrains all of the kana sounds that are added in Unity, not Visual Studio
+    
 
-//class methods
+    //class methods
     void Awake()
     {
         cam = Camera.main;
@@ -89,8 +92,20 @@ public class Drag_and_Drop : MonoBehaviour
             {
                 firstSprite.transform.position = originalLocation01;    //returns the sound sprite to where it was
                 secondSprite.transform.position = originalLocation02;   //returns the kana sprite to where it was
+
+                //marks the kana + sound that was guessed incorrectly to allow the player to review them
+                incorrectKana.Add(secondSprite.GetComponent<SpriteRenderer>().sprite);
+                incorrectSound.Add(firstSprite.GetComponent<AudioSource>().clip);
             }
         }
+    }
+    public List<Sprite> sendIncorrectKana()
+    {
+        return incorrectKana;
+    }
+    public List<AudioClip> sendIncorrectSound()
+    {
+        return incorrectSound;
     }
     Vector3 GetMousePos()
     {
