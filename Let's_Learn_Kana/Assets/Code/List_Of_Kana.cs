@@ -22,32 +22,33 @@ public class List_Of_Kana : MonoBehaviour
     public List<int>    FiveUniqueRandomNumbers(int maximum) //chooses 5 unique random numbers between 0 and maximum (where maximum is also a possibe random number) 
     {
         List<int> fiveRandomNumbers = new List<int>();
+        int min = 0;
+        int max = maximum;
+        Debug.Log("maximum = " + maximum);
 
-        while (fiveRandomNumbers.Capacity < 5)
+        while (fiveRandomNumbers.Count < 5)
         {
-            int min = 0;
-            int max = maximum;
+            int randomNumber = Random.Range(min, max); //chooses a random number from 0 to X, but not including X
 
-            int randomNumber = Random.Range(min, max); //chooses a random number from 0 to X
-
-            if (!(fiveRandomNumbers.Contains(randomNumber))) //sees if the random number is NOT already inside the list
+            if (!fiveRandomNumbers.Contains(randomNumber)) //sees if the random number is NOT already inside the list
             {
                 fiveRandomNumbers.Add(randomNumber); //add the random number to the list
-                //fiveRandomNumber's capacity increases by 1
+                //fiveRandomNumber's count increases by 1
             }
             //
             //else
             //{
-               //if the random number is already inside the list, regenerate a new random number
+               //if the random number is already inside the list, regenerate a new random number by going back to the top of the while loop
             //}
         }
+        //Debug.Log("fiveRandomNumbers.Count = " + fiveRandomNumbers.Count);
+        //Debug.Log("fiveRandomNumbers.Capacity = " + fiveRandomNumbers.Capacity);
 
-        //Debug.Log("fiveRandomNumbers.Capacity " + fiveRandomNumbers.Capacity);
+        //Debug.Log("fiveRandomNumbers.Count " + fiveRandomNumbers.Count;
         //foreach (int i in fiveRandomNumbers)
         //{
         //    Debug.Log("Random number is " + i);
         //}
-        //Debug.Log("\n");*/
 
         return fiveRandomNumbers;
     }
@@ -83,21 +84,26 @@ public class List_Of_Kana : MonoBehaviour
     }
     public void         ChangeSound(List<AudioClip> theList, int listIndex, GameObject spritePosition)
     {
-        SpriteRenderer  oldSprite               = spritePosition.GetComponent<SpriteRenderer>();
+        SpriteRenderer  oldSound                = spritePosition.GetComponent<SpriteRenderer>();
         AudioClip       newSound                = theList[listIndex]; //chooses a random kana from the array
 
-        //changing the old sound to be the new sounds
-        oldSprite.GetComponent<AudioSource>().clip = newSound;
+        //changing the old sound to be the new sound
+        oldSound.GetComponent<AudioSource>().clip = newSound;
     }
     public void         Spawn() //uploads 5 random kana and their sounds to be shown in the game 
     {
         //chooses 5 random numbers between 0 and X (including the last index of kanaList)...(i.e., choosing 5 random kana and their sounds from the list)
-        List<int>       fiveRandomNumbers       = FiveUniqueRandomNumbers(kanaList.Capacity);
+        List<int>       fiveRandomNumbers       = FiveUniqueRandomNumbers(kanaList.Count);
         int             firstRandomIndex        = fiveRandomNumbers[0];
         int             secondRandomIndex       = fiveRandomNumbers[1];
         int             thirdRandomIndex        = fiveRandomNumbers[2];
         int             fourthRandomIndex       = fiveRandomNumbers[3];
         int             fifthRandomIndex        = fiveRandomNumbers[4];
+        foreach (int i in fiveRandomNumbers)
+        {
+            Debug.Log("Random number is " + i);
+        }
+        Debug.Log("\n");
 
         //spritePosition has all of the kana sprite locations, and randomly choose where the new kana sprite is going to be positioned
         GameObject[]    randomSpritePosition    = randomizeSpritePosition(kanaPosition01, kanaPosition02, kanaPosition03, kanaPosition04, kanaPosition05);

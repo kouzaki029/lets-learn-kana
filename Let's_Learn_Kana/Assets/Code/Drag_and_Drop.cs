@@ -77,7 +77,7 @@ public class Drag_and_Drop : MonoBehaviour
     }
     public void CheckAnswer(GameObject firstSprite, GameObject secondSprite, Vector3 originalLocation01, Vector3 originalLocation02)
     {
-        if (Vector3.Distance(firstSprite.transform.position, secondSprite.transform.position) < .4)
+        if (Vector3.Distance(firstSprite.transform.position, secondSprite.transform.position) < .6)
         {
             if (firstSprite.GetComponent<AudioSource>().clip.name == secondSprite.GetComponent<SpriteRenderer>().sprite.name)
             {
