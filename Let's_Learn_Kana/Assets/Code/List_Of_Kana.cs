@@ -158,35 +158,46 @@ public class List_Of_Kana : MonoBehaviour
     }
     void                Update() //called once per frame
     {
-        //removing the used sprite+sound from the pool of sounds+sprites
-        Sprite usedKana1 = kanaPosition01.GetComponent<SpriteRenderer>().sprite;
-        kanaList.Remove(usedKana1);
-        Sprite usedKana2 = kanaPosition02.GetComponent<SpriteRenderer>().sprite;
-        kanaList.Remove(usedKana2);
-        Sprite usedKana3 = kanaPosition03.GetComponent<SpriteRenderer>().sprite;
-        kanaList.Remove(usedKana3);
-        Sprite usedKana4 = kanaPosition04.GetComponent<SpriteRenderer>().sprite;
-        kanaList.Remove(usedKana4);
-        Sprite usedKana5 = kanaPosition05.GetComponent<SpriteRenderer>().sprite;
-        kanaList.Remove(usedKana5);
-        AudioClip usedSound1 = soundPosition01.GetComponent<AudioSource>().clip;
-        soundList.Remove(usedSound1);
-        AudioClip usedSound2 = soundPosition02.GetComponent<AudioSource>().clip;
-        soundList.Remove(usedSound2);
-        AudioClip usedSound3 = soundPosition03.GetComponent<AudioSource>().clip;
-        soundList.Remove(usedSound3);
-        AudioClip usedSound4 = soundPosition04.GetComponent<AudioSource>().clip;
-        soundList.Remove(usedSound4);
-        AudioClip usedSound5 = soundPosition05.GetComponent<AudioSource>().clip;
-        soundList.Remove(usedSound5);
-
-        if (!(kanaPosition01.activeSelf) && !(kanaPosition02.activeSelf) && !(kanaPosition03.activeSelf) && !(kanaPosition04.activeSelf) && !(kanaPosition05.activeSelf) && !(soundPosition01.activeSelf) && !(soundPosition02.activeSelf) && !(soundPosition03.activeSelf) && !(soundPosition04.activeSelf) && !(soundPosition05.activeSelf))
+        if ( kanaList.Count > 0 && soundList.Count > 0 )
         {
-            //Debug.Log("Time to respawn!");
+            //removing the used sprite+sound from the pool of sounds+sprites
+            Sprite usedKana1 = kanaPosition01.GetComponent<SpriteRenderer>().sprite;
+            kanaList.Remove(usedKana1);
+            Sprite usedKana2 = kanaPosition02.GetComponent<SpriteRenderer>().sprite;
+            kanaList.Remove(usedKana2);
+            Sprite usedKana3 = kanaPosition03.GetComponent<SpriteRenderer>().sprite;
+            kanaList.Remove(usedKana3);
+            Sprite usedKana4 = kanaPosition04.GetComponent<SpriteRenderer>().sprite;
+            kanaList.Remove(usedKana4);
+            Sprite usedKana5 = kanaPosition05.GetComponent<SpriteRenderer>().sprite;
+            kanaList.Remove(usedKana5);
+            AudioClip usedSound1 = soundPosition01.GetComponent<AudioSource>().clip;
+            soundList.Remove(usedSound1);
+            AudioClip usedSound2 = soundPosition02.GetComponent<AudioSource>().clip;
+            soundList.Remove(usedSound2);
+            AudioClip usedSound3 = soundPosition03.GetComponent<AudioSource>().clip;
+            soundList.Remove(usedSound3);
+            AudioClip usedSound4 = soundPosition04.GetComponent<AudioSource>().clip;
+            soundList.Remove(usedSound4);
+            AudioClip usedSound5 = soundPosition05.GetComponent<AudioSource>().clip;
+            soundList.Remove(usedSound5);
 
-            Refresh(); //makes sure all of the sprites are visible and they're back in their original places
+            if (!kanaPosition01.activeSelf && !kanaPosition02.activeSelf && !kanaPosition03.activeSelf && !kanaPosition04.activeSelf && !kanaPosition05.activeSelf && !soundPosition01.activeSelf && !soundPosition02.activeSelf && !soundPosition03.activeSelf && !soundPosition04.activeSelf && !soundPosition05.activeSelf)
+            {
+                //Debug.Log("Time to respawn!");
 
-            Spawn();
+                Refresh(); //makes sure all of the sprites are visible and they're back in their original places
+
+                Spawn();
+            }
         }
+        else
+        {
+            if (!kanaPosition01.activeSelf && !kanaPosition02.activeSelf && !kanaPosition03.activeSelf && !kanaPosition04.activeSelf && !kanaPosition05.activeSelf && !soundPosition01.activeSelf && !soundPosition02.activeSelf && !soundPosition03.activeSelf && !soundPosition04.activeSelf && !soundPosition05.activeSelf)
+            {
+                //Debug.Log("Congratulations! You guessed all of the kana correctly!");
+            }
+        }
+
     }
 }
